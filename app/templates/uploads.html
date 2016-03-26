@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+
+<ol>
+{% for file in files %}
+    {% if '.' in file and file.rsplit('.', 1)[1] == 'jpg' %}
+        <img src="{{ url_for('uploaded_file', filename=file) }}">
+	{% endif %}
+    <li>{{file}}</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

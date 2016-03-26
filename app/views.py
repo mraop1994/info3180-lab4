@@ -8,7 +8,7 @@ This file creates your application.
 
 from app import app
 import os
-from flask import session,flash,render_template, request, redirect, url_for
+from flask import session,flash,render_template, request, redirect, url_for, send_from_directory
 USERNAME="admin"
 PASSWORD="naseberry"
 SECRET_KEY="super secure key"
